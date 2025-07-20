@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dress Business Tracker</title>
+  <link rel="stylesheet" href="dress.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>HARSHI'S COLLECTIONS</h2>
+
+    <!-- Add Stock -->
+    <div class="section">
+      <h3>Add Item to Stock</h3>
+      <input type="text" id="itemName" placeholder="Item Name" />
+      <input type="number" id="costPrice" placeholder="Cost Price" />
+      <input type="number" id="quantity" placeholder="Quantity" />
+      <button onclick="addToStock()">Add to Stock</button>
+    </div>
+
+    <!-- Sell Section -->
+    <div class="section">
+      <h3>Sell Item</h3>
+      <select id="sellItemSelect"></select>
+      <input type="number" id="sellPrice" placeholder="Selling Price" />
+      <input type="number" id="sellQuantity" placeholder="Quantity to Sell" />
+      <input type="date" id="sellDate" />
+      <button onclick="sellItem()">Sell</button>
+    </div>
+
+    <!-- Inventory Table -->
+    <div class="section">
+      <h3>Current Stock</h3>
+      <table>
+        <thead>
+          <tr><th>Item</th><th>Cost Price</th><th>Stock</th><th>Action</th></tr>
+        </thead>
+        <tbody id="inventoryTable"></tbody>
+      </table>
+    </div>
+
+    <!-- Sales Table -->
+    <div class="section">
+      <h3>Sales</h3>
+      <table>
+        <thead>
+          <tr><th>Item</th><th>Cost</th><th>Sell</th><th>Qty</th><th>Date</th><th>Profit</th></tr>
+        </thead>
+        <tbody id="salesTable"></tbody>
+        <tfoot>
+          <tr><td colspan="5"><strong>Total Profit</strong></td><td id="totalProfit" class="bold-profit">₹0</td></tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <script src="dress.js"></script>
+</body>
+</html>
